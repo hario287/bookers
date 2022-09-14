@@ -1,9 +1,18 @@
-<th>Title:</th>
-<p><%= @list.title %></p>
+<% if flash[:notice] %>
+  <div class="flash">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
 
-<th>Body:<th>
-<p><%= @list.body %></p>
+<p>
+<strong>Title:</strong>
+<%= @book.title %></p>
+
+<p>
+<strong>Body:</strong>
+<%= @book.body %></p>
 
 <%= link_to "Edit", edit_book_path(@book.id) %>
-<p>|</p>
-<%= link_to "Back", book_path(@book.id) %>
+|
+<!--< %= link_to "Back", book_path(@book.id) %>-->
+<a class="back" href="/books">Back</a>
