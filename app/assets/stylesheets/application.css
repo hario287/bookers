@@ -8,7 +8,7 @@ body {
     margin: 33px;
 }
 
-:notice {
+.flash {
     color: green;
 }
 
